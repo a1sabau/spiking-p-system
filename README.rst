@@ -15,7 +15,7 @@ Table cell details: ::
 Compute numbers of form *3k + 2* using 3 neurons
 ************************************************
 
-Neurons and corresponding rules ::
+Neurons and corresponding rules: ::
 
   rule0 = [TransformationRule(div=1, mod=0, source=1, target=1, delay=2)]
   pn0 = PNeuron(targets=[1], transf_rules=rule0)
@@ -76,7 +76,7 @@ Generated table is for *k = 3*. ::
 Compute a finite *{ 1, 2, ...k }* set using a one-neuron system
 ***************************************************************
 
-Neurons and corresponding rules ::
+Neurons and corresponding rules: ::
 
   rule0 = TransformationRule(div=1, mod=0, source=1, target=1, delay=i) for i in range(1, k)
   rule1 = TransformationRule(div=2, mod=0, source=1, target=1, delay=0))
