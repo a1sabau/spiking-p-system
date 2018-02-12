@@ -20,11 +20,15 @@ class SNPSystem:
         # record output
         self.output = []
 
+    def init_history(self):
+        """init tick history based on the system's neurons"""
+        self.history = History(self.neurons)
+
     def start(self):
         """start sending and receiving spikes"""
 
         # init history
-        self.history = History(self.neurons)
+        self.init_history()
 
         # keep on ticking until output condition is met or max number of ticks is exceeded
         while True:

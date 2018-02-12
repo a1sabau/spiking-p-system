@@ -1,5 +1,5 @@
 """Some examples using spiking neural p systems"""
-from spiking_p_system.SNPSystem import SNPSystem
+from sps.SNPSystem import SNPSystem
 
 def compute_fig2(k):
     snps = SNPSystem(max_delay=5, max_steps=100)
@@ -9,7 +9,6 @@ def compute_fig2(k):
     print(snps.history)
     #output is 3k+2
     print("input: ", k, "result", snps.result())
-    print(snps.output)
 
 def compute_finite_set(k):
     snps = SNPSystem(max_delay=k, max_steps=100)
@@ -20,5 +19,5 @@ def compute_finite_set(k):
     # output is value from the {1,2, ...k} set
     print("input: ", k, "result", snps.result())
 
-#compute_fig2(k=2)
-compute_finite_set(k = 10)
+compute_fig2(k=2)
+#compute_finite_set(k = 10)
